@@ -1,0 +1,77 @@
+body {
+  background: url("https://homestars.com/assets/background-tile.png");
+}
+.container {
+  display: flex;
+  padding: 3rem 2rem;
+}
+
+.leftside {
+  flex: 1.5;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.leftside h1 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  color: #222;
+}
+
+.img img {
+  width: 10rem;
+}
+
+.line {
+  width: 6rem;
+  height: 4px;
+  background-color: dodgerblue;
+}
+
+.rightside {
+  flex: 1;
+  padding: 4rem 2rem;
+}
+
+.info {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 4px 7px 14px #777;
+}
+
+.info a {
+  color: #777;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+input,
+select {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+}
+.phoneno {
+  display: flex;
+  justify-content: space-between;
+}
+
+.phonecode input {
+  display: block;
+  padding: 0.25rem 0 0.25rem;
+}
+
+button {
+  background-color: #fad04f;
+  padding: 1.25rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+}

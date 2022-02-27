@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Utilities.css" />
+    <link rel="stylesheet" href="../css/joinHomeStar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Matching Home Services</title>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+    <div class="container">
+      <div class="leftside">
+        <div class="img">
+          <a href="./index.html">
+                <img src="https://storage.pardot.com/209902/79553/homestars_lead_driver_logo_2x.png" alt="">
+          </a>
+        </div>
+        <h1>We’re in the business of growing yours.</h1>
+        <div class="line"></div>
+        <p>
+          Create your HomeStars profile, and get in front of the
+          <strong>9 million homeowners</strong> who visit us every year. More
+          eyes on your business means more opportunity to connect with your next
+          customer.
+        </p>
+      </div>
+      <div class="rightside">
+        <div class="info">
+          <form class="form">
+            <h1>Create Your Profile</h1>
+            <label for="name">Professional / Company Name</label>
+            <input type="text" placeholder="Your Business Name" />
+            <label for="category">Category</label>
+            <select name="category">
+              <option value="carpenters">Carpenters</option>
+              <option value="builders">Builders</option>
+              <option value="art">Artist</option>
+              <option value="layman">Layman</option>
+              <option value="businessman">Businessman</option>
+            </select>
+            <div class="phoneno">
+              <span class="phonecode">
+                <label for="postalcode">Postal Code</label>
+                <input type="number" placeholder="A1B 2C3" />
+              </span>
+              <span class="phonecode">
+                <label for="phone">Phone No.</label>
+                <input type="number" placeholder="123 789 4567" />
+              </span>
+            </div>
+            <button>REGISTER NOW!</button>
+          </form>
+          <p>
+            Already have an account? <a href="../views/login.html">Log in</a> to
+            continue
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer-component></footer-component>
+  </body>
+  <script src="../components.js"></script>
+</html>

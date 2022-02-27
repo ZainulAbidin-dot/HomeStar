@@ -1,0 +1,112 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus-visible {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* utilities */
+
+.container {
+  width: min(1170px, 90vw);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.25em;
+  border: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: inherit;
+  border-radius: 0.15rem;
+}
+
+/* footer */
+
+.footer {
+  background: #232f3a;
+  color: #f4f4f4;
+}
+
+.newsletter {
+  font-size: 1.125rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid #fff;
+}
+
+.newsletter > * {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.newsletter__signup p {
+  font-size: 1.25rem;
+}
+
+.newsletter__signup-button {
+  background: #2fbb86;
+}
+
+.primary-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+  row-gap: 1.75rem;
+  column-gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.primary-footer h2 {
+  margin-bottom: 0.75rem;
+}
+
+.primary-footer li {
+  margin-bottom: 0.375rem;
+}
+
+.primary-footer__social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.social__logo {
+  flex-grow: 1;
+}
+
+.primary-footer__copyright {
+  text-align: center;
+}

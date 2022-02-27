@@ -1,0 +1,38 @@
+.main-container {
+  padding: 1rem;
+  background-color: #fff;
+  margin: 1rem;
+  border: 1px solid #333;
+  text-align: justify;
+}
+
+.container {
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+.category-heading {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+ul li {
+  font-size: 15px;
+  list-style: none;
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+ul li a {
+  text-decoration: none;
+  color: #27a9e1;
+  margin: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin: 1rem;
+}

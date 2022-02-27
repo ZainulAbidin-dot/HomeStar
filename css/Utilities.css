@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: "Fira Sans", sans-serif;
+  color: #535455;
+  background-color: #faf9f5;
+}
+
+/* Logo */
+.site-header__logo {
+  margin: 0.5rem;
+  display: block;
+  height: 3.33333rem;
+  width: 7.73333rem;
+  color: transparent;
+  cursor: pointer;
+}
+
+.site-header__logo :hover {
+  background-color: blueviolet;
+}
+/* Nav Bar */
+nav {
+  /* position: fixed;
+  left: 0;
+  right: 0;
+  top: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.651);
+  box-shadow: 0px 1px 1px #999;
+}
+
+nav li {
+  list-style: none;
+}
+.nlinks {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #535455;
+  margin-right: 1rem;
+}
+
+.navlink {
+  font-weight: bold;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  color: #373730;
+  background: #ffde5b;
+  border: 1px solid #ffd942;
+  padding: 0.7rem 1.3rem;
+}
+
+/* Sign Up Heading  */
+.heading {
+  font-weight: 500;
+  font-family: "Fira Sans", sans-serif;
+  text-align: center;
+  color: #373730;
+}

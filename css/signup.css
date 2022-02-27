@@ -1,0 +1,119 @@
+/* Form Input */
+
+.columns {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.btn-right {
+  padding: 0.75rem 1rem;
+  margin: 1rem 0.25rem;
+  box-shadow: 0 6px 6px -6px #535455;
+}
+
+.btn-left {
+  display: block;
+  color: #fff;
+  background-color: #27a9e1;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0.25rem;
+}
+
+.facebook {
+  font-size: 15px;
+  color: whitesmoke;
+  font-family: "Fira Sans", sans-serif;
+  background: #3b5999;
+  border: 1px solid #344e87;
+  border-radius: 0.25rem;
+}
+.google {
+  font-size: 15px;
+  font-family: "Fira Sans", sans-serif;
+  color: #777;
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: 0.25rem;
+}
+
+/* Left - Side */
+.left-col {
+  flex: 1;
+  margin: 0 4rem;
+  padding: 2.5rem;
+}
+
+form label:not(:last-of-type) {
+  display: block;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  margin: 1rem 0;
+}
+
+form input:not([type="checkbox"]) {
+  padding: 12px 10px;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #333;
+  outline: none;
+  /* box-shadow: inset 0 1px 3px 0 rgb(35 47 58 / 20%); */
+}
+/* 
+form input:not([type="checkbox"]):hover {
+  outline: 1px solid rgba(0, 0, 255, 0.5);
+} */
+
+input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* Center Line */
+.borderLine {
+  flex: 1;
+  width: 1px;
+  height: 30rem;
+  position: absolute;
+  background: #dedfe0;
+}
+.LogInborderLine {
+  flex: 1;
+  width: 1px;
+  height: 25rem;
+  position: absolute;
+  background: #dedfe0;
+}
+
+/* Right - Side */
+.right-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  margin: 0.5rem 4rem;
+}
+
+.colr {
+  margin-right: 1rem;
+}
+
+/* End Part of Sign Up */
+
+.contact {
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  margin: 4.5rem auto;
+}

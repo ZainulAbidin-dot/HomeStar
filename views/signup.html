@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Utilities.css" />
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Sign Up | HomeStars</title>
+  </head>
+  <body>
+    <navbar-component></navbar-component>
+    <div class="container">
+      <div class="heading">
+        <h1>Sign Up</h1>
+      </div>
+      <div class="columns">
+        <div class="left-col">
+          <form action="submit">
+            <label for="name">Display Name</label>
+            <input type="text" />
+            <label for="email">Email</label>
+            <input type="email" placeholder="name@address.domain"/>
+            <label for="password"><strong>Password</strong></label>
+            <input type="password" placeholder="your password"/>
+            <span class="checkboxLabel">
+              <input type="checkbox" />
+              <label for="checkbox"
+                ><strong>Join our newsletter</strong>, your weekly companion for
+                all things home</label
+              ></span
+            >
+            <button class="btn-left">Join HomeStars</button>
+          </form>
+        </div>
+        <div class="borderLine"></div>
+        <div class="right-col">
+          <button class="btn-right facebook"><i class="fa-brands colr fa-facebook-square"></i>
+            <strong>LOG IN USING FACEBOOK</strong>
+          </button>
+          <button class="btn-right google"><i class="fa-brands colr fa-google"></i>
+            <strong>LOG IN USING GOOGLE</strong>
+          </button>
+        </div>
+      </div>
+      <div class="contact">
+        <p>Already have an account? <a style="color: #27a9e1;" href="./login.html">Log in</a>.</p>
+        <small>By clicking "Join HomeStars", "Sign Up using Facebook," or "Sign Up using Google," I acknowledge and agree to the <a style="color: #27a9e1;" href="https://homestars.com/terms">Terms
+        of Use</a> and <a style="color: #27a9e1;" href="https://homestars.com/privacy">Privacy Policy</a></small>
+      </div>
+    </div>
+  </body>
+  <script src="../components.js"></script>
+</html>

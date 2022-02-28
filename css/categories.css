@@ -4,6 +4,21 @@
   margin: 1rem;
   border: 1px solid #333;
   text-align: justify;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 600px) {
+  .service {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1020px) {
+  .service {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .container {

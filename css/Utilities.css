@@ -63,6 +63,11 @@ li a {
   padding: 0.7rem 1.3rem;
 }
 
+.navlink a {
+  color: #373730;
+  text-decoration: none;
+}
+
 /* Sign Up Heading  */
 .heading {
   font-weight: 500;

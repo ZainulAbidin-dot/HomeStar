@@ -1,9 +1,102 @@
-const temp = document.createElement("template");
-temp.innerHTML = `
-    <link rel="stylesheet" href="../css/Utilities.css" />
-    <nav>
-      <li>
-        <a href="./index.html">
+const footerTemplate = document.createElement("template");
+footerTemplate.innerHTML = `
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../css/footer.css">
+<footer class="footer">
+  <div class="container">
+    <div class="newsletter">
+      <div class="newsletter__signup">
+        <i class="fa-solid fa-envelope"></i>
+        <p>Get Exclusive Tips & Advice</p>
+        <a href="../views/signup.html" class="btn newsletter__signup-button">Sign Up</a>
+      </div>
+      <div class="newsletter__contact-us">
+        <p>Need Help?</p>
+        <a class="newsletter__contact-us-link" href="#">Contact Us</a>
+      </div>
+    </div>
+    <div class="primary-footer">
+      <div class="primary-footer__for-homeworks">
+        <h2>Homeworks</h2>
+        <ul>
+          <li><a href="#">Browse Categories</a></li>
+          <li><a href="#">Browse Task</a></li>
+          <li><a href="#">Write A Review</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Star Reviews</a></li>
+          <li><a href="#">Homeowner FAQ</a></li>
+          <li><a href="#">Review Guideline</a></li>
+          <li><a href="#">Homeowner Trust</a></li>
+          <li><a href="#">Cost Guides</a></li>
+          <li><a href="#">Reno Report</a></li>
+        </ul>
+      </div>
+      <div class="primary-footer__for-home-professionals">
+        <h2>Home Professionals</h2>
+        <ul>
+          <li><a href="#">Join Homestars</a></li>
+          <li><a href="#">Brand Builder</a></li>
+          <li><a href="#">Home Professional FAQ</a></li>
+          <li><a href="#">Building Trust</a></li>
+          <li><a href="#">Mobile App</a></li>
+          <li><a href="#">Home Professional Terms</a></li>
+          <li><a href="#">Pro Center</a></li>
+        </ul>
+      </div>
+      <div class="primary-footer__for-homestars">
+        <h2>HomeStars</h2>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Press & Announcements</a></li>
+          <li><a href="#">Career at HomeStars</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Cities</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div class="primary-footer__social">
+        <div class="social__logo">
+          <div class="social_icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+          </div>
+        </div>
+        <a href="#" class="primary-footer_logo">
+          <img src="https://homestars.com/images/hs_ha_combined2x-optimized_20072018.png" alt="">
+        </a>
+        <small class="primary-footer__copyright">
+          © 2022 HomeStars, Inc., a HomeAdvisor company.
+        </small>
+      </div>
+    </div>
+  </div>
+</footer>
+`;
+
+class Footer extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
+  }
+}
+
+window.customElements.define("footer-component", Footer);
+
+const navTemp = document.createElement("template");
+navTemp.innerHTML = `
+
+<link rel="stylesheet" href="../css/nav.css">
+    <header class="header">
+      <nav class="navbar">
+        <a href="../index.html" class="logo">
             <svg
           version="1.1"
           id="Layer_1"
@@ -84,125 +177,45 @@ temp.innerHTML = `
             ></path>
           </g>
         </svg>
-        </a>
-      </li>
-      <div class="nlinks">
-      <li><a href="../views/index.html">Home</li>
-      <li><a href="../views/review.html">Review</li>
-      <li><a href="../views/joinHomeStar.html">JoinHomeStar</li>
-      <li><a href="../views/categories.html">Categories</li>      
-      <li><a href="../views/newsLetter.html">News-Letter</li>
-      <li><a href="../views/login.html">Log In</li>
-      <li><a href="../views/signup.html">Sign Up</li>
+              </a>
+        <button class="hamburger" id="hamburger">
+          <span class="inner"></span>
+        </button>
+        <div class="nav-wrapper">
+          <ul class="nav__items">
+            <li class="nav__item"><a class="nav__link" href="../index.html">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="../views/review.html">Review</a></li>
+            <li class="nav__item"><a class="nav__link" href="../views/joinHomeStar.html">JoinHomeStar</a></li>
+            <li class="nav__item"><a class="nav__link" href="../views/categories.html">Categories</a></li>
+            <li class="nav__item"><a class="nav__link" href="../views/newsLetter.html">News-Letter</a></li>
+            <li class="nav__item"><a class="nav__link" href="../views/login.html">Log In</a></li>
+            <li class="nav__item"><a class="nav__link" href="../views/signup.html">Sign Up</li>
 
-
-      
-      </div>
-      <li>
-        <a class="navlink" href="./index.html">ARE YOU A HOME PRO?</a>
-      </li>
-    </nav>
-
-`;
-
-class NavBar extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild(temp.content.cloneNode(true));
-  }
-}
-
-window.customElements.define("navbar-component", NavBar);
-
-const footerTemplate = document.createElement("template");
-footerTemplate.innerHTML = `
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="../css/footer.css">
-<footer class="footer">
-  <div class="container">
-    <div class="newsletter">
-      <div class="newsletter__signup">
-        <i class="fa-solid fa-envelope"></i>
-        <p>Get Exclusive Tips & Advice</p>
-        <a href="" class="btn newsletter__signup-button">Sign Up</a>
-      </div>
-      <div class="newsletter__contact-us">
-        <p>Need Help?</p>
-        <a class="newsletter__contact-us-link" href="#">Contact Us</a>
-      </div>
-    </div>
-    <div class="primary-footer">
-      <div class="primary-footer__for-homeworks">
-        <h2>Homeworks</h2>
-        <ul>
-          <li><a href="#">Browse Categories</a></li>
-          <li><a href="#">Browse Task</a></li>
-          <li><a href="#">Write A Review</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Star Reviews</a></li>
-          <li><a href="#">Homeowner FAQ</a></li>
-          <li><a href="#">Review Guideline</a></li>
-          <li><a href="#">Homeowner Trust</a></li>
-          <li><a href="#">Cost Guides</a></li>
-          <li><a href="#">Reno Report</a></li>
-        </ul>
-      </div>
-      <div class="primary-footer__for-home-professionals">
-        <h2>Home Professionals</h2>
-        <ul>
-          <li><a href="#">Join Homestars</a></li>
-          <li><a href="#">Brand Builder</a></li>
-          <li><a href="#">Home Professional FAQ</a></li>
-          <li><a href="#">Building Trust</a></li>
-          <li><a href="#">Mobile App</a></li>
-          <li><a href="#">Home Professional Terms</a></li>
-          <li><a href="#">Pro Center</a></li>
-        </ul>
-      </div>
-      <div class="primary-footer__for-homestars">
-        <h2>HomeStars</h2>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Our Team</a></li>
-          <li><a href="#">Press & Announcements</a></li>
-          <li><a href="#">Career at HomeStars</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Cities</a></li>
-          <li><a href="#">Privacy</a></li>
-        </ul>
-      </div>
-      <div class="primary-footer__social">
-        <div class="social__logo">
-          <div class="social_icons">
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-          </div>
+          </ul>
         </div>
-        <a href="#" class="primary-footer_logo">
-          <img src="https://homestars.com/images/hs_ha_combined2x-optimized_20072018.png" alt="">
-        </a>
-        <small class="primary-footer__copyright">
-          © 2022 HomeStars, Inc., a HomeAdvisor company.
-        </small>
-      </div>
-    </div>
-  </div>
-</footer>
-`;
+        <div class="card-wrapper">
+        <a class="navlink" href="./index.html">ARE YOU A HOME PRO?</a>
+        </div>
+      </nav>
+    </header>
+  `;
 
-class Footer extends HTMLElement {
+class Navbar extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
+    this.shadowRoot.appendChild(navTemp.content.cloneNode(true));
+  }
+
+  toggleNav() {
+    this.shadowRoot.querySelector(".hamburger").classList.toggle("menu-active");
+  }
+
+  connectedCallback() {
+    this.shadowRoot
+      .querySelector(".hamburger")
+      .addEventListener("click", () => this.toggleNav());
   }
 }
 
-window.customElements.define("footer-component", Footer);
+window.customElements.define("nav-component", Navbar);

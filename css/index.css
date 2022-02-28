@@ -35,6 +35,15 @@
   display: flex;
 }
 
+@media (max-width: 680px) {
+  .form .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+  }
+}
+
 .form-group {
   display: flex;
   align-items: center;
@@ -68,8 +77,10 @@
 .service {
   font-size: 16px;
   padding: 2rem;
-  display: flex;
-  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
 }
 
 .para p {
@@ -78,24 +89,48 @@
   margin-left: 1rem;
 }
 
+@media (min-width: 600px) {
+  .service {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1020px) {
+  .service {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
 .service li {
-  display: block;
+  text-align: center;
+
+  margin-top: 1rem;
+  /* grid-template-columns: repeat(3, 1fr); */
 }
 
 .service li a:hover {
   color: #27a9e1;
 }
 
+.service-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-link li a {
+  margin-top: 1rem;
+}
 .colr {
-  font-size: 18px;
   color: #27a9e1;
 }
 
 .centerline {
   width: 90%;
   height: 1px;
-  border: 1px solid #777;
-  margin: 2rem 3rem;
+  border: 1px solid rgba(153, 153, 153, 0.253);
+  margin: 2rem auto;
 }
 
 .browse h1,
@@ -109,11 +144,23 @@ h3 {
 }
 
 .hire {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 2rem;
+}
+@media (max-width: 680px) {
+  .hire {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .leftside {
   flex: 1;
+}
+
+.container {
+  display: flex;
+  padding: 2rem;
 }
 
 .rightside {
@@ -136,8 +183,12 @@ h3 {
 }
 
 .cards {
-  margin: 4rem 20rem;
-  padding: 2rem;
+  margin: 5rem 0;
+}
+
+.cards img {
+  display: block;
+  margin: 0 auto;
 }
 
 .testimonial-card {
@@ -153,7 +204,6 @@ h3 {
   top: -18%;
   transform: translate(-50%, 0);
   width: 100px;
-  aspect-ratio: 1;
   border-radius: 50%;
   border: 5px solid #fff;
   object-fit: cover;
@@ -214,9 +264,30 @@ h3 {
   color: #f8ce0b;
 }
 
-.cardcontainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 5rem;
+.card-container {
+  max-width: 1100px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  row-gap: 5rem;
+  column-gap: 1rem;
+  place-items: center;
+  margin-bottom: 3rem;
+}
+
+/* Last index section  before footer */
+.getStarted {
+  background: url("https://homestars.com/images/homepage/Home%20Pro%20BG%20Image.png")
+    no-repeat center center/cover;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.getStarted h3 {
+  font-size: 30px;
+  font-weight: lighter;
+  color: #fff;
+}
+.getStarted p {
+  color: #fff;
 }

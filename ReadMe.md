@@ -6,6 +6,7 @@
 3. Open/Run live server and the project will run in your browser on your localhost. The links in the navbar are fully functional and the is completely responsive.
 
 
-###This website has been deployed on surge and can be accessed through :
+### This website has been deployed on surge and can be accessed through :
 [LINK HERE](https://pro-jellyfish.surge.sh/)
   
+P.S. : Open it in a new tab by Right Click 
